@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font/font/fontello.css">
+    <title>ToDo List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: IranSansLight;
+            src: url(font/IRANSansX-Light.ttf);
+        }
+
+        @font-face {
+            font-family: IranSansBold;
+            src: url(font/IRANSansX-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: IranSansMedium;
+            src: url(font/IRANSansX-Medium.ttf);
+        }
+
+        @font-face {
+            font-family: IranSansRegular;
+            src: url(font/IRANSansX-Regular.ttf);
+        }
+
+        body {
+            background-color: rgb(31, 31, 33);
+            font-family: 'IranSansLight';
+        }
+
+        /* // start nav // */
+        nav {
+            margin-top: 1%;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+
+            /* border: 1px solid white; */
+            >* {
+                margin: 0 1%;
+                width: 33.3333%;
+            }
+
+            >div {
+                &:nth-of-type(1) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    /* background-color: yellow; */
+                    color: white;
+                    gap: 5px;
+
+                    >img {
+                        width: 10%;
+                    }
+
+                }
+
+                &:nth-of-type(2) {
+                    /* background-color: red;  */
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    >input {
+                        width: 100%;
+                        height: 30px;
+                        border-radius: 10px;
+                        border: none;
+                        padding: 2%;
+                        outline: none;
+                        font-family: IranSansMedium;
+                        text-transform: capitalize;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    /* background-color: blue; */
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+
+                    >span {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-image: url(img/New\ Project\ \(10\).webp);
+                        background-size: cover;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-family: IranSansMedium;
+                        border: 2px solid rgb(255, 255, 255);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        /* //end nav// */
+        section {
+            display: flex;
+
+            >* {
+                height: 80vh;
+                border-radius: 10px;
+                margin: 1% 0 0 1%;
+            }
+
+            >ul {
+                width: 20%;
+                background-color: rgb(25, 45, 75);
+            }
+
+            /* //end unordered list // */
+            >main {
+                width: 80%;
+                /* background-color: rgb(126, 75, 134); */
+                background-image: url(img/bg.webp);
+                background-size: cover;
+                margin-right: 1%;
+
+                >div {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+
+                    &:nth-of-type(1) {
+                        width: 100%;
+                        height: 50px;
+                        background-color: rgba(0, 0, 0, 0.244);
+                        backdrop-filter: blur(10px);
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1%;
+
+                        >* {
+                            border: none;
+                            font-family: IranSansRegular;
+                            border-radius: 5px;
+                            height: 50%;
+                        }
+
+                        >input {
+                            width: 50%;
+                            height: 60%;
+                            outline: none;
+                            padding-left: 1%;
+                            text-transform: capitalize;
+                        }
+
+                        >button {
+                            width: 10%;
+                            background-color: rgba(255, 255, 255, 0.613);
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &:nth-of-type(2) {
+                        width: 250px;
+                        height: 150px;
+                        padding: 20px;
+                        /* border: 1px solid white; */
+                        border-radius: 20px;
+                        background-color: rgba(0, 0, 0, 0.086);
+                        backdrop-filter: blur(5px);
+                        box-shadow: 0 0 5px black;
+                        color: rgb(255, 255, 255);
+                        margin: 1%;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        >.box_h2 {
+                            width: 230px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding: 5px;
+
+                            >h2 {
+                                display: block;
+                                width: 100%;
+                                word-break: break-word;
+                                font-size: 14px;
+                                line-height: 1.4;
+                                text-align: center;
+                            }
+                        }
+
+                        >.box_icons {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            background-color: rgba(25, 45, 75, 0.558);
+                            border-radius: 10px;
+                            color: rgb(255, 255, 255);
+
+                            /* border: 1px solid white; */
+                            >input {
+                                width: 15px;
+                                height: 15px;
+                                margin-bottom: 1%;
+                            }
+
+                            >span {
+                                font-size: 18px;
+                                padding: 1%;
+                                cursor: pointer;
+                                background-color: rgba(255, 0, 0, 0.628);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            /* //main// */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- //start nav// -->
+    <nav>
+        <div>
+            <img src="img/logo.png" alt="logo">
+            <p>ToDo List</p>
+        </div>
+        <div>
+            <input type="text" placeholder="Search">
+        </div>
+        <div>
+            <span></span>
+        </div>
+    </nav>
+    <!-- //end nav// -->
+    <section>
+        <ul>dvfsddcv</ul>
+        <!-- // end unordered list // -->
+        <main>
+            <div>
+                <input type="text" placeholder="Please enter your task" maxlength="60">
+                <button>+ Add a card</button>
+            </div>
+            <div class="task">
+                <div class="box_h2">
+                    <h2>رفتن به کتابخانه</h2>
+                </div>
+                <div class="box_icons">
+                    <input type="checkbox">
+                    <span class="icon-edit"></span>
+                    <span class="icon-trash-empty"></span>
+                </div>
+            </div>
+        </main>
+        <!-- //end main// -->
+    </section>
+
+
+</body>
+
+</html>
