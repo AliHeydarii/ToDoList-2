@@ -44,6 +44,7 @@
             height: 50px;
             display: flex;
             justify-content: space-between;
+
             >* {
                 margin: 0 1%;
                 width: 33.3333%;
@@ -125,8 +126,8 @@
                 flex-wrap: wrap;
                 align-content: start;
                 max-height: calc(100vh - 100px);
-                overflow-y: auto; 
-                padding-bottom: 1%; 
+                overflow-y: auto;
+                padding-bottom: 1%;
 
                 >div {
                     width: 100%;
@@ -176,7 +177,7 @@
             height: 150px;
             padding: 20px;
             border-radius: 20px;
-            background-color: rgba(0, 0, 0, 0.138);
+            background-color: rgba(0, 0, 0, 0.086);
             backdrop-filter: blur(5px);
             box-shadow: 0 0 5px black;
             color: rgb(255, 255, 255);
@@ -241,7 +242,7 @@
         </div>
     </nav>
     <section>
-        <ul>ul</ul>
+        <ul id="trash"></ul>
         <main>
             <div>
                 <input id="Input_task" type="text" placeholder="Please enter your task" maxlength="60">
@@ -263,21 +264,35 @@
         } else {
             const task = document.createElement('div')
             task.classList.add('task')
-            task.innerHTML=`
+            task.innerHTML = `
             <div class="box_h2">
                     <h2>${tempVal}</h2>
                 </div>
                 <div class="box_icons">
-                    <input type="checkbox">
+                    <input onchange='myCheck(this)' type="checkbox">
                     <span class="icon-edit"></span>
-                    <span class="icon-trash-empty"></span>
+                    <span onclick='myDel(this)' class="icon-trash-empty"></span>
                 </div>
             `
             _main.appendChild(task)
-            Input_task.value=''
+            Input_task.value = ''
             Input_task.focus()
         }
     })
+    function myCheck(s) {
+        let title = s.parentElement.previousElementSibling.innerText
+        s.checked ? s.parentElement.previousElementSibling.innerHTML = '<del>' + title + '</del>' : s.parentElement.previousElementSibling.innerHTML = title
+    }
+    function myDel(s) {
+        if (confirm('آیا از پاک کردن تسک خود مطمئن هستین؟')) {
+            let li = document.createElement('li')
+            li.innerHTML = s.parentElement.previousElementSibling.parentElement.children[0].innerText
+            trash.append(li)
+            //reset//
+            s.parentElement.previousElementSibling.parentElement.remove()
+            //reset//
+        }
+    }
 </script>
 
 </html>
