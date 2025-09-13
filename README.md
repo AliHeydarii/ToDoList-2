@@ -1,6 +1,6 @@
 # ToDoList-2 - [Demo Project](https://aliheydarii.github.io/ToDoList-2/)
 
-![viewfinal](https://github.com/user-attachments/assets/9c20f370-ee96-4fa6-bb0b-2bacfc9dbdf2))
+![viewfinal](https://github.com/user-attachments/assets/9c20f370-ee96-4fa6-bb0b-2bacfc9dbdf2)
 
 - [Demo Project](https://aliheydarii.github.io/ToDoList-2/)
 
