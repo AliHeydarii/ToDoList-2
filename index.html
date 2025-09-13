@@ -5,227 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="font/font/fontello.css">
+    <link rel="stylesheet" href="style.css">
     <title>ToDo List</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        @font-face {
-            font-family: IranSansLight;
-            src: url(font/IRANSansX-Light.ttf);
-        }
-
-        @font-face {
-            font-family: IranSansBold;
-            src: url(font/IRANSansX-Bold.ttf);
-        }
-
-        @font-face {
-            font-family: IranSansMedium;
-            src: url(font/IRANSansX-Medium.ttf);
-        }
-
-        @font-face {
-            font-family: IranSansRegular;
-            src: url(font/IRANSansX-Regular.ttf);
-        }
-
-        body {
-            background-color: rgb(31, 31, 33);
-            font-family: 'IranSansLight';
-        }
-
-        nav {
-            margin-top: 1%;
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: space-between;
-
-            >* {
-                margin: 0 1%;
-                width: 33.3333%;
-            }
-
-            >div {
-                &:nth-of-type(1) {
-                    display: flex;
-                    align-items: center;
-                    justify-content: start;
-                    color: white;
-                    gap: 5px;
-
-                    >img {
-                        width: 10%;
-                    }
-                }
-
-                &:nth-of-type(2) {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    >input {
-                        width: 100%;
-                        height: 30px;
-                        border-radius: 10px;
-                        border: none;
-                        padding: 2%;
-                        outline: none;
-                        font-family: IranSansMedium;
-                        text-transform: capitalize;
-                    }
-                }
-
-                &:nth-of-type(3) {
-                    display: flex;
-                    justify-content: end;
-                    align-items: center;
-
-                    >span {
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        background-image: url(img/New\ Project\ \(10\).webp);
-                        background-size: cover;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: white;
-                        font-family: IranSansMedium;
-                        border: 2px solid rgb(255, 255, 255);
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-
-        section {
-            display: flex;
-
-            >* {
-                height: 80vh;
-                border-radius: 10px;
-                margin: 1% 0 0 1%;
-            }
-
-            >ul {
-                width: 20%;
-                background-color: rgb(25, 45, 75);
-            }
-
-            >main {
-                width: 80%;
-                background-image: url(img/bg.webp);
-                background-size: cover;
-                margin-right: 1%;
-                display: flex;
-                flex-wrap: wrap;
-                align-content: start;
-                max-height: calc(100vh - 100px);
-                overflow-y: auto;
-                padding-bottom: 1%;
-
-                >div {
-                    width: 100%;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-evenly;
-
-                    &:nth-of-type(1) {
-                        width: 100%;
-                        height: 50px;
-                        background-color: rgba(0, 0, 0, 0.244);
-                        backdrop-filter: blur(10px);
-                        border-radius: 10px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 1%;
-
-                        >* {
-                            border: none;
-                            font-family: IranSansRegular;
-                            border-radius: 5px;
-                            height: 50%;
-                        }
-
-                        >input {
-                            width: 50%;
-                            height: 60%;
-                            outline: none;
-                            padding-left: 1%;
-                            text-transform: capitalize;
-                        }
-
-                        >button {
-                            width: 10%;
-                            background-color: rgba(255, 255, 255, 0.613);
-                            color: black;
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-        }
-
-        .task {
-            width: 250px;
-            height: 150px;
-            padding: 20px;
-            border-radius: 20px;
-            background-color: rgba(0, 0, 0, 0.086);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 0 5px black;
-            color: rgb(255, 255, 255);
-            margin: 1%;
-            display: flex;
-            flex-wrap: wrap;
-
-            >.box_h2 {
-                width: 230px;
-                display: flex;
-                flex-wrap: wrap;
-                padding: 5px;
-
-                >h2 {
-                    display: block;
-                    width: 100%;
-                    word-break: break-word;
-                    font-size: 14px;
-                    line-height: 1.4;
-                    text-align: center;
-                }
-            }
-
-            >.box_icons {
-                width: 100%;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                background-color: rgba(25, 45, 75, 0.558);
-                border-radius: 10px;
-                color: rgb(255, 255, 255);
-
-                >input {
-                    width: 15px;
-                    height: 15px;
-                    margin-bottom: 1%;
-                }
-
-                >span {
-                    font-size: 18px;
-                    padding: 1%;
-                    cursor: pointer;
-                    background-color: rgba(255, 0, 0, 0.628);
-                    border-radius: 50%;
-                }
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -235,64 +16,34 @@
             <p>ToDo List</p>
         </div>
         <div>
-            <input type="text" placeholder="Search">
+            <input id="search" type="text" autocomplete="off" placeholder="Search">
         </div>
         <div>
             <span></span>
         </div>
     </nav>
     <section>
-        <ul id="trash"></ul>
+        <ul id="trash">
+            <h3>Recycle Bin ♻️</h3>
+        </ul>
         <main>
             <div>
                 <input id="Input_task" type="text" placeholder="Please enter your task" maxlength="60">
-                <button id="btn_Add_card">+ Add a card</button>
+                <button onclick="resetLi(this)" id="btn_Add_card">+ Add a card</button>
             </div>
         </main>
     </section>
+    <footer>
+        <div>
+            <p>Developed By Ali Heydari</p>
+            <a href="https://github.com/AliHeydarii" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/ali-heydari-3567b2191/" target="_blank">Linkedin</a>
+            <a href="https://www.instagram.com/alifront_com" target="_blank">Instagram</a>
+        </div>
+
+    </footer>
 
 </body>
-<script>
-    const btn_Add_card = document.getElementById('btn_Add_card')
-    const Input_task = document.getElementById('Input_task')
-    const _main = document.querySelector('main')
-
-    btn_Add_card.addEventListener('click', () => {
-        let tempVal = Input_task.value
-        if (tempVal == '') {
-            alert('لطفا تسک خود را وارد کنید!')
-        } else {
-            const task = document.createElement('div')
-            task.classList.add('task')
-            task.innerHTML = `
-            <div class="box_h2">
-                    <h2>${tempVal}</h2>
-                </div>
-                <div class="box_icons">
-                    <input onchange='myCheck(this)' type="checkbox">
-                    <span class="icon-edit"></span>
-                    <span onclick='myDel(this)' class="icon-trash-empty"></span>
-                </div>
-            `
-            _main.appendChild(task)
-            Input_task.value = ''
-            Input_task.focus()
-        }
-    })
-    function myCheck(s) {
-        let title = s.parentElement.previousElementSibling.innerText
-        s.checked ? s.parentElement.previousElementSibling.innerHTML = '<del>' + title + '</del>' : s.parentElement.previousElementSibling.innerHTML = title
-    }
-    function myDel(s) {
-        if (confirm('آیا از پاک کردن تسک خود مطمئن هستین؟')) {
-            let li = document.createElement('li')
-            li.innerHTML = s.parentElement.previousElementSibling.parentElement.children[0].innerText
-            trash.append(li)
-            //reset//
-            s.parentElement.previousElementSibling.parentElement.remove()
-            //reset//
-        }
-    }
-</script>
+<script src="app.js"></script>
 
 </html>
