@@ -81,14 +81,10 @@
         /// search /// 
         let tempH2 = document.querySelectorAll('.task h2')
         tempH2.forEach((val) => {
-            if (
-                val.innerText.indexOf(searchval) >= 0
-            ) {
-                val.parentElement.parentElement.style.display = 'block'
+            if (val.innerText.includes(searchval)) {
+                val.closest('.task').classList.remove('hide');
             } else {
-                val.parentElement.parentElement.style.display = 'none'
-                val.classList.add('hide')
-
+                val.closest('.task').classList.add('hide');
             }
         })
     })
