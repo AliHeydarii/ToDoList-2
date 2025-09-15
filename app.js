@@ -14,7 +14,7 @@
     })
     function myCheck(s) {
         let title = s.parentElement.previousElementSibling.previousElementSibling.children[0].innerText
-        s.checked ? s.parentElement.previousElementSibling.previousElementSibling.children[0].innerHTML = '<del>' + title + '</del>' : s.parentElement.previousElementSibling.previousElementSibling.children[0].innerHTML = title
+        s.checked ? s.parentElement.previousElementSibling.previousElementSibling.children[0].style.color = 'red' : s.parentElement.previousElementSibling.previousElementSibling.children[0].style.color='white'
     }
     function myDel(s) {
         if (confirm('آیا از پاک کردن تسک خود مطمئن هستین؟')) {
