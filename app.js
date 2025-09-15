@@ -87,6 +87,7 @@
                 val.parentElement.parentElement.style.display = 'block'
             } else {
                 val.parentElement.parentElement.style.display = 'none'
+                val.classList.add('hide')
 
             }
         })
