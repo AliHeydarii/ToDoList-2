@@ -84,7 +84,7 @@
             if (
                 val.innerText.indexOf(searchval) >= 0
             ) {
-                val.parentElement.parentElement.style.display = 'block'
+                val.parentElement.parentElement.style.display = 'flex'
             } else {
                 val.parentElement.parentElement.style.display = 'none'
             }
